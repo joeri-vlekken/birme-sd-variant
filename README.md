@@ -1,8 +1,9 @@
 # Birme Variant for Stable Diffusion
 When training Stable Diffusion (or other generative image models) we need high quality and cropped training images at 512x512.  Birme is the best tool for doing this quickly, and with the help of [smartcrop.js](https://github.com/jwagner/smartcrop.js/) it's truly a powerful tool for batch cropping images.
 
-## Changes to this fork
-This fork changes the 'x' to '#' as iterator during file renames.
+## Changes in this fork
+- Switching 'x' for '#' as iterator during file renames.
+- 'noindex' parameter to prevent crawling by search engines.
 
 ## Local Install
 Clone the repository and open index.html in your favorite browser (excluding Firefox).  Feel free to bookmark!
