@@ -568,7 +568,7 @@ class Birme {
           type: "blob",
         })
         .then(content => {
-          saveAs(content, `birme-${w}x${h}.zip`);
+          saveAs(content, `resize-images-${w}x${h}.zip`);
           this.hide_modal();
         });
     } else {
@@ -709,10 +709,10 @@ class Birme {
         if (new_filename.toLowerCase().indexOf('.' + output.ext) == -1) new_filename += '.' + output.ext;
       } else {
         let filename = config.rename.toLowerCase();
-        var pattern = new RegExp("x{2,}");
+        var pattern = new RegExp("#{2,}");
         var result = pattern.exec(filename);
         if (!result) {
-          pattern = new RegExp("x+");
+          pattern = new RegExp("#+");
           result = pattern.exec(filename);
         }
         if (!result) {
